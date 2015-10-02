@@ -12,4 +12,13 @@ class Student(models.Model):
 
 	def _str_(self):
 		return self.full_name
+
+class Classroom(models.Model):
+	full_name=models.CharField(max_length=200)
+	floor=models.CharField(max_length=200)
+	has_podium=models.BooleanField(initial=True)
+	commissioned_date=models.DateField(auto_now=False, auto_now_add=True)
+	created_at=models.DateField(auto_now=False, auto_now_add=True)
+	updated_at=models.DateField(auto_now=True, auto_now_add=False)
+
 	
