@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    # THIS URL MAPS TO THE FUNCTION IN VIEWS
     url(r'^$', "newsletter.views.home", name="home"),
 ]
