@@ -8,5 +8,5 @@ class SignUp(models.Model):
     updated= models.DateTimeField(auto_now_add=False, auto_now=True)
 
     #returns only the email
-    def __str__(self):
-        return self.email
+    # def __str__(self):
+    #     return self.email

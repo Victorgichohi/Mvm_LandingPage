@@ -11,8 +11,8 @@ class SignUpForm(forms.ModelForm):
         email=self.cleaned_data.get('email')
         email_base, provider = email.split('@')
         domain, extension = provider.split('.')
-        if not domain == 'KE':
-            raise forms.ValidationError("please provide a kenyan email")
+        # if not domain == 'KE':
+        #     raise forms.ValidationError("please provide a kenyan email")
         if not extension == "edu":
             raise forms.ValidationError("please use a valid edu email")
         return email
